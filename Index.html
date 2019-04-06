@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="mainContainer">
+        <div class="columns">
+            <div class="column is-three-fifths">
+                <table class="table is-fullwidth">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Avaliable</td>
+                            <td>Name</td>
+                        </tr>
+                    </thead>
+
+                    <tbody id="dataTable">
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="column">
+                <table class="table is-fullwidth">
+                    <thead>
+                        <tr>
+                            <td>menu:</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Clear table: </td>
+                            <td><button class="button is-info" id="clear">Clear</button></td>
+                        </tr>
+
+                        <tr>
+                            <td>Load all items: </td>
+                            <td><button class="button is-info" id="loadAll">Load data</button></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="text" placeholder="ID..." id="idValue"></td>
+                            <td><button class="button is-info" id="findById">Find by Id</button></td>
+                        </tr>
+
+                        <tr>
+                            <td>Add item: </td>
+                            <td><button class="button is-primary" id="addItem">Add item</button></td>
+                        </tr>
+
+                        <tr>
+                            <td>Edit item: </td>
+                            <td><button class="button is-primary" id="editItem">Edit item</button></td>
+                        </tr>
+
+                        <tr>
+                            <td><input type="text" placeholder="Remove item by ID" id="idRemove"></td>
+                            <td><button class="button is-danger" id="removeBtn">remove item</button></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="postContainerHidden" id="postContainer">
+        <div class="field">
+            <label class="label">Name</label>
+            <div class="control">
+                <input class="input" type="text" placeholder="Name" id="nameToAdd" required>
+            </div>
+        </div>
+
+        <div class="field">
+            <div class="control">
+                <label class="checkbox">
+                    <input type="checkbox" id="checkAvaliable">
+                    Product avaliable</a>
+                </label>
+            </div>
+        </div>
+
+        <div class="field is-grouped">
+            <div class="control">
+                <button class="button is-primary" id="submitBtn">Submit</button>
+            </div>
+            <div class="control">
+                <button class="button is-text" id="cancelBtn">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="putContainerHidden" id="putContainer">
+        <div class="field">
+                <label class="label">Id of an item You want to edit</label>
+                <div class="control">
+                    <input class="input" type="number" placeholder="Id" id="idToEdit" required>
+                </div>
+            </div>
+
+            <div class="field">
+                <label class="label">Name</label>
+                <div class="control">
+                    <input class="input" type="text" placeholder="Name" id="nameToEdit" required>
+                </div>
+            </div>
+    
+            <div class="field">
+                <div class="control">
+                    <label class="checkbox">
+                        <input type="checkbox" id="checkAvaliableToEdit">
+                        Product avaliable</a>
+                    </label>
+                </div>
+            </div>
+    
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-primary" id="submitPutBtn">Submit</button>
+                </div>
+                <div class="control">
+                    <button class="button is-text" id="cancelPutBtn">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    <script type="text/javascript" src="js/PostAndDeleteData.js"></script>
+    <script type="text/javascript" src="js/editData.js"></script>
+    <script type="text/javascript" src="js/getData.js"></script>
+</body>
+</html>

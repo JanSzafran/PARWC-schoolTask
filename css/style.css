@@ -1,0 +1,18 @@
+html,
+body {
+    height: 100%;
+}
+
+#postContainer, #putContainer {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    height: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.postContainerHidden, .putContainerHidden {
+    visibility: hidden;
+}
